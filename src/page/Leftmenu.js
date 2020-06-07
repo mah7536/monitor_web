@@ -25,7 +25,6 @@ const Leftmenu = () => {
   };
 
   const Logout = () => {
-    console.log(123);
     Global.setLogout();
   };
   return (

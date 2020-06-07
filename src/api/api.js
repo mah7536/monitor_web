@@ -9,7 +9,6 @@ const API = axios.create({
 export const Login = (data) =>
   API.post("/login", data)
     .then((res) => {
-      console.log(data);
       return res.data;
     })
     .catch((err) => {
