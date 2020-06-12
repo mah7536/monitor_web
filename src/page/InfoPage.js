@@ -275,6 +275,11 @@ const InfoPage = () => {
     if (ws) {
       initWebSocket();
     }
+    return () => {
+      if (ws) {
+        ws.close();
+      }
+    };
   }, [ws]);
 
   const initWebSocket = () => {
@@ -282,7 +287,6 @@ const InfoPage = () => {
       ws.send("1qaz2wsx#EDCXZASWQ@!!");
     };
     ws.onclose = () => {
-      console.log(144);
       Global.setLogout();
     };
     ws.onmessage = (response) => {
@@ -294,6 +298,11 @@ const InfoPage = () => {
               type: "DbData",
               dbData: data,
             });
+            for (var key in data) {
+              if (!data[key].status) {
+                Global.message("error", data[key].name);
+              }
+            }
           } else if (data[key].type == "rs") {
             setState({
               type: "RsData",
@@ -305,6 +314,7 @@ const InfoPage = () => {
               webData: data,
             });
           }
+
           break;
         }
       }

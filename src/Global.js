@@ -7,6 +7,8 @@ import { Alert } from "@material-ui/lab";
 
 const GlobalContext = createContext();
 
+// all of state for info page
+
 const Global = (props) => {
   const [isLogin, setLogin] = React.useState(false);
   const [account, setAccount] = React.useState("");
@@ -25,8 +27,12 @@ const Global = (props) => {
     if (message != "") {
       setMessage(info);
     }
-    setOpen(true);
-    setTimeout(() => setOpen(false), 3000);
+    if (!open) {
+      setOpen(true);
+      setTimeout(() => {
+        setOpen(false);
+      }, 3000);
+    }
   };
 
   const handleClose = () => {

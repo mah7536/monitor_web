@@ -24,18 +24,15 @@ const LoginPage = () => {
     Login({
       account: Global.account,
       password: Global.password,
-    })
-      .then((res) => {
-        if (res.code != 0) {
-          Global.message("error", res.message);
-          return;
-        }
-        Global.setLoginId(res.loginId);
-        Global.message("info", res.message);
-      })
-      .then((res) => {
-        Global.setLogin(!Global.isLogin);
-      });
+    }).then((res) => {
+      if (res.code != 0) {
+        Global.message("error", res.message);
+        return;
+      }
+      Global.setLoginId(res.loginId);
+      Global.message("info", res.message);
+      Global.setLogin(!Global.isLogin);
+    });
   };
 
   return (
