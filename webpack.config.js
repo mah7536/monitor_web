@@ -5,6 +5,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
+  target:"web",
   context: __dirname,
   entry: "./src/index.js",
   output: {
