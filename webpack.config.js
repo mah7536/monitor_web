@@ -6,6 +6,7 @@ const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  target:"web",
   context: __dirname,
   entry: "./src/index.js",
   output: {
