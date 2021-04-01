@@ -51,15 +51,6 @@ function App() {
         )}
       </Switch> */}
 
-      {!Global.isLogin ? (
-        current_path == "/login" ? (
-          <></>
-        ) : (
-          <Redirect to="/" />
-        )
-      ) : (
-        <Redirect to="/" />
-      )}
       <Switch>
         {!Global.isLogin ? (
           <Route path="/">

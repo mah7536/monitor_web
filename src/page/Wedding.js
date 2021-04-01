@@ -2,13 +2,13 @@
 
 import React from "react";
 import { Carousel } from "antd";
-import i1 from "Path/image/1.jpg";
-import i2 from "Path/image/2.jpg";
-import i3 from "Path/image/3.jpg";
-import i4 from "Path/image/4.jpg";
-import i5 from "Path/image/5.jpg";
-import i6 from "Path/image/6.jpg";
-import i7 from "Path/image/7.jpg";
+import i1 from "./1.jpg";
+import i2 from "./2.jpg";
+import i3 from "./3.jpg";
+import i4 from "./4.jpg";
+import i5 from "./5.jpg";
+import i6 from "./6.jpg";
+import i7 from "./7.jpg";
 import "Path/App.css";
 import { Card } from "antd";
 import { Typography, Row, Col, Space } from "antd";
@@ -63,11 +63,11 @@ const Wedding = () => {
         <Text></Text>
       </Card>
       <Carousel autoplay>
-        <EachImage background={`url(${i1})`} />
-        <EachImage background={`url(${i2})`} />
-        <EachImage background={`url(${i3})`} />
+        <EachImage background={i1} />
+        <EachImage background={i2} />
+        <EachImage background={i3} />
       </Carousel>
-      <Card style={{ ...imageStyle, backgroundImage: `url(${i7})` }}>
+      <Card style={{ ...imageStyle, backgroundImage: i7 }}>
         <Title>Wedding Information</Title>
         <Row>
           <Col span={11}>
@@ -82,9 +82,9 @@ const Wedding = () => {
         </Row>
       </Card>
       <Carousel autoplay>
-        <EachImage background={`url(${i4})`} />
-        <EachImage background={`url(${i5})`} />
-        <EachImage background={`url(${i6})`} />
+        <EachImage background={{ i4 }} />
+        <EachImage background={{ i5 }} />
+        <EachImage background={{ i6 }} />
       </Carousel>
       <Card style={{ ...imageStyle, background: "silver" }}>
         <Title style={goldText}>心裡的話</Title>
