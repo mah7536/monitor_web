@@ -5,9 +5,9 @@ import "Path/App.css";
 import { GlobalContext } from "Path/Global";
 import { Input, Button } from "@material-ui/core";
 import { Login } from "Path/api/api";
-import { Test } from "Path/component/test";
 
-const LoginPage = () => {
+
+const DashBoard = () => {
   const Global = React.useContext(GlobalContext);
   const setAccount = (event) => {
     Global.setAccount(event.target.value);
@@ -47,30 +47,10 @@ const LoginPage = () => {
           rel="noopener noreferrer"
         ></a>
 
-        <Input
-          onChange={setAccount}
-          required
-          autoFocus
-          placeholder="Account"
-        ></Input>
-        <Input
-          onChange={setPassword}
-          required
-          placeholder="Password"
-          type="password"
-        ></Input>
         <br></br>
-        <Button variant="contained" color="primary" onClick={userLogin}>
-          登入
-        </Button>
-        <Test
-          Click={() => {
-            console.log("我是登入頁");
-          }}
-        />
       </header>
     </div>
   );
 };
 
-export default LoginPage;
+export default DashBoard;

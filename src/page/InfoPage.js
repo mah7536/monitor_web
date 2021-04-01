@@ -17,6 +17,7 @@ import {
   Badge,
 } from "@material-ui/core";
 import { Global } from "../Global";
+import { Test } from "Path/component/test";
 
 // panel style
 const usePanelStyles = makeStyles((theme) => ({
@@ -177,6 +178,11 @@ const InfoPage = () => {
           key={key}
         >
           <CardContent>
+            <Test
+              Click={() => {
+                console.log("我是帥哥");
+              }}
+            />
             <Typography
               className={cardClasses.title}
               color="textSecondary"

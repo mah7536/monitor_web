@@ -3,6 +3,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   context: __dirname,
@@ -47,5 +48,6 @@ module.exports = {
       "process.env.API_Host": JSON.stringify("http://192.168.0.105:1234"),
       "process.env.Websocket_Host": JSON.stringify("ws://192.168.0.105:1234"),
     }),
+    new CopyWebpackPlugin({ patterns: [{ from: "img", to: "img" }] }),
   ],
 };
