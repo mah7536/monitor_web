@@ -39,3 +39,10 @@
     transform: rotate(360deg);
   }
 }
+
+.heart {
+  position: relative;
+  width: 10%;
+  height: 10%;
+  background-color: red;
+}
